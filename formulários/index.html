@@ -1,0 +1,132 @@
+<!--Utilize as tags de formulário para criar uma página de pesquisa de opinião sobre
+"preferências esportivas".
+• Desenhe no formulário campos exclusivos para identificar o sexo, o estado civil e a
+faixa etária da pessoa que responde à pesquisa. Atribua a botões de seleção múltipla as
+diversas modalidades esportivas, e permita que o usuário que selecionar "outras" inclua
+uma nova.
+• Use campo de texto para identificar a cidade onde mora a pessoa.
+• Através de <select> permita que ela aponte o estado onde mora.
+• Permita que ela inclua comentários através de um campo de textarea.
+• Inclua os botões para envio ou redefinição das respostas do formulário.
+• Finalmente, a página precisa ter um alinhamento de parágrafo agradável, cores
+“animadas” e inclua um título e um cabeçalho nomeando a pesquisa.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1 class="title"><strong>Preferências Esportivas</strong></h1><br>
+    <form method="post" action="mailto:carneirolucascerqueira@outlook.com" name="formulario" id="formulario" target="_blank">
+        <div class="nome">
+            <label for="nome"><strong>Nome</strong></label><br>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome..." required>
+        </div>
+        <br>
+        <div class="senha">
+            <label for="Senha"><strong>Senha</strong><br>
+                <input type="password" name="senha" id="Senha" placeholder="Digite sua senha..." required>
+            </label>
+        </div>
+        <br>
+        <div class="cel">
+            <label><strong>Celular</strong><br>
+                <select name="local" id="local" required>
+                    <option selected disabled value="">DDI</option>
+                    <option value="BR">BR(+55)</option>
+                    <option value="BR">USA(+1)</option>
+                    <option value="BR">UK(+44)</option>
+                    <option value="BR">CHN(+86)</option>
+                </select>
+                <input type="text" name="ddd" id="ddd" placeholder="DDD" required>
+                <input type="tel" name="cel" id="cel" placeholder="x xxxx-xxxx" required>
+            </label>
+        </div>
+        <br>
+        <div class="date">
+            <label for="Data"><strong>Data de nascimento</strong><br>
+                <input type="date" name="date" id="Date" required>
+            </label>
+        </div>
+        <br>
+        <div class="sex">
+            <label><strong>Selecione seu sexo</strong></label>
+            <div class="sex-content">
+                <label>
+                    <input type="radio" name="sexo" value="masculino" checked>Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="feminino">Feminino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="indefinido">Indefinido
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="estado-civil">
+            <label><strong>Selecione seu estado civil</strong></label><br>
+            <label>
+                <input type="radio" name="estd-civil" value="solteiro" checked>Solteiro
+            </label>
+            <label>
+                <input type="radio" name="estd-civil" value="casado">Casado
+            </label>
+            <label>
+                <input type="radio" name="estd-civil" value="viúvo">Viúvo
+            </label>
+        </div>
+        <br>
+        <div class="esporte">
+            <label><strong>Escolha sua modalidade</strong></label><br>
+            <label>
+                <input type="radio" name="modalidade" value="futebol" checked>Futebol
+            </label>
+            <label>
+                <input type="radio" name="modalidade" value="volei">Vôlei
+            </label>
+            <label>
+                <input type="radio" name="modalidade" value="basquete">Basquete
+            </label>
+            <label>
+                <input type="radio" name="modalidade" value="natacao">Natação
+            </label>
+            <label>
+                <input type="radio" name="modalidade" value="habdball">Handball
+            </label> <br>
+            <label for="outro">
+                <input type="radio" name="modalidade" value="outro">Outro: <input type="text" name="outro" id="outro">
+            </label>
+        </div>
+        <br>
+        <div class="lugar">
+            <label><strong>Escolha o bairro onde mora</strong></label><br>
+            <select name="bairro" id="bairro">
+                <option selected disabled value="">Selecione</option>
+                <option value="barra">Barra</option>
+                <option value="guaratiba">Guaratiba</option>
+                <option value="cordeirinho">Cordeirinho</option>
+                <option value="boqueirao">Boqueirão</option>
+                <option value="pn">Ponta Negra</option>
+            </select>
+        </div>
+        <br>
+        <div class="text">
+            <p><strong>Deixe seu comentário</strong></p><br>
+            <textarea name="coment" id="coment" cols="30" rows="10" placeholder="Digite seu comentário..."></textarea>
+        </div>
+        <br>
+        <div class="btn">
+            <button type="submit">Enviar</button>
+        </div> 
+        <div class="btn-1">
+            <button type="reset">Limpar Formulário</button>
+        </div>             
+</form>
+</body>
+</html>
